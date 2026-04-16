@@ -1,0 +1,26 @@
+# Streamlit 核心框架（必须）
+streamlit>=1.30.0
+
+# 通义千问 API（OpenAI 兼容客户端）
+openai>=1.0.0
+
+# 侧边栏导航菜单（你代码里用到了 streamlit-option-menu）
+streamlit-option-menu>=0.3.6
+
+# 图像处理（如果你的代码有图片上传/显示）
+Pillow>=10.0.0
+
+# 网络请求（API 调用必用）
+requests>=2.31.0
+
+# 环境变量管理（放 API 密钥用）
+python-dotenv>=1.0.0
+
+# 数据处理/JSON/TOML 配置
+numpy>=1.26.0
+pandas>=2.1.0
+toml>=0.10.2
+
+# 可选（如果你用了思维导图/可视化）
+# pyecharts>=2.0.0
+# streamlit-pyecharts>=0.1.0
