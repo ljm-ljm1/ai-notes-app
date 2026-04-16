@@ -1,10 +1,11 @@
 import os
 import requests
-# 把这两行注释掉
-# from dotenv import load_dotenv, find_dotenv
-# load_dotenv(find_dotenv(), override=True)
+from dotenv import load_dotenv, find_dotenv
 
-# 只保留这一行，直接读环境变量
+# 只在本地运行时加载 .env，云端自动跳过
+if os.path.exists(find_dotenv()):
+    load_dotenv(find_dotenv(), override=True)
+
 API_KEY = os.getenv("DASHSCOPE_API_KEY")
 API_URL = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
 MODEL_NAME = "qwen-turbo"
